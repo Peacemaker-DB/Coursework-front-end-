@@ -6,14 +6,13 @@
     margin-right: 10%;
     margin-left: 10%;
     display: grid;
-    grid-template-rows: fit-content(0) fit-content(0);
-    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: fit-content(0) fit-content(0) fit-content(0);
+    grid-template-columns: 1fr 1fr 0.4fr;
     grid-template-areas:
-    "header header"
-    "navigation navigation"
-    "head  head"
-    "main  nav"
-    "foter foter";
+    "header header header"
+    "navigation  navigation navigation"
+    "head head head"
+    "main main nav";
     gap: 15px;
     text-align: center;
 }
@@ -72,7 +71,7 @@
     background-color: aliceblue;
     border: 5px;
     border-radius: 20px;
-    width: 135px;
+    width: 120px;
     height: 20px;
     cursor: pointer;
   }
@@ -87,14 +86,14 @@
   }
   
   .link_menu-content{
-    height: auto;
-    width: 135px;
     display: none;
     position: absolute;
     background-color: aliceblue;
     border: 5px;
     border-radius: 20px;
+    width: auto;
     z-index: 1;
+    overflow: auto;
   }
   
   .link_menu-content a {
@@ -139,7 +138,13 @@
     padding-left: 5%;
     padding-top: 20px;
 }
-
+.contents-head1{
+    text-align: left;
+    height: 180px;
+    border: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
 .contents-head1 h1{
     padding-left: 5%;
     padding-top: 55px;
@@ -156,7 +161,6 @@
     border-radius: 20px;
     background-color: aliceblue;
 }
-
 .contents-cont img{
     width: 80%;
     height: 80%;
@@ -241,45 +245,6 @@
 .up_navigation .stickyup {
     position: fixed;
   }
-
-
-/* Подпись текста */
-.text {
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
-  }
-/* Вперед и назад кнопки */
-.prev, .next {
-    cursor: pointer;
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    user-select: none;
-  }
-.foter_container{
-    grid-area: foter;
-    
-}
-.line{
-    width: auto;
-    top: 5px;
-    height: 5px;
-    background-color: aliceblue;
-}
-.foter{
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-    border: 10px;
-    border-radius: 20px;
-    background-color: aliceblue;
-}
-
 @media (max-width: 1024px) {
     .container {
         grid-template-rows: fit-content(0) fit-content(0) 1fr fit-content(0);
