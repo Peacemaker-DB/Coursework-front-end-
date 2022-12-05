@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <script src="Script.js"></script>
+    <link rel="icon" type="image/png" href="Object/Иконка.png" />
+    <title>Наша Солнечная система</title>
+  </head>
+  <body class="page_style">
+    <div id="navication_bar" class = "navication_mobile">
+      <div class="navication">
+        <div class="navication_icon">
+          <img class="icon"
+          src="Иконка.png"
+          alt="Логотип сайта"
+          width="40"
+          height="40"
+        />
+        <p class="active">Солнечная система</p>
+        </div>
+        <div id="myLinks" class="dropdown">
+          <div class="navication_page-menu">
+            <p>Навигация по странице</p>
+          <a href="#Solar_s">Солнечная система</a>
+        </div>
+        <div class="navication_page-link">
+          <p>Навигация по сайту</p>
+          <a href="#Start">Главная</a>
+          <a href="#Solar_s">Карта</a>
+          <a href="#Solar_s">Тела</a>
+          <a href="#Solar_s">История</a>
+          <a href="#Solar_s">Галерея</a>
+          <a href="#Solar_s">Контакты</a>
+        </div>
+        </div>
+        <a href="javascript:void(0);" onclick="Function()">
+          <img class="icon_burger" src="Object/Бургер.png" width="30"height="30"></img>
+        </a>
+      </div>
+    </div>
+    <div id="up" class = "up_navigation">
+      <div class="n">
+        <a href="#Start">
+          <img class="icon_burger" src="Object/Вверх.png" width="30"height="30"></img>
+        </a>
+      </div>
+    </div>
+    <script>
+      window.onscroll = function() {myFunction()};
+      var up = document.getElementById("up");
+      var stickyup = up.offsetTop;
+      
+      var navbar = document.getElementById("navication_bar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+       
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+        if (window.pageYOffset >= stickyup) {
+          up.classList.add("stickyup")
+        } else {
+          up.classList.remove("stickyup");
+        }
+      }
+      </script>
+<script>
+  function Function() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+    <div class="container">
+      <div class="head">
+        <div class="title">
+          <img
+            class="icon"
+            src="Иконка.png"
+            alt="Логотип сайта"
+            width="100"
+            height="100"
+          />
+          <h1 id="Start">Солнечная система</h1>
+          <p>
+            Человечество не останется вечно на Земле, но в погоне за светом и
+            пространством сначала робко проникнет за пределы атмосферы, а затем
+            завоюет себе все околосолнечное пространство.
+          </p>
+          <p>К. Циолковский</p>
+        </div>
+        <div class="slocan">
+          <p>Сайт посвещен пространству Солнечной системы</p>
+        </div>
+      </div>
+      <div class="top-menu">
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="#Start">Главная</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="#">Карта</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div onclick="topmenu1()" class="list_link-menu">
+            <span>Тела</span>
+          </div>
+          <div id="listlink-menu1" class="link_menu-content">
+            <a href="#">Солнце</a>
+            <a href="#">Планеты</a>
+            <a href="#">Малые космические объекты</a>
+            <a href="#">Солнце</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div onclick="topmenu2()" class="list_link-menu">
+            <span>История</span>
+          </div>
+          <div id="listlink-menu2" class="link_menu-content">
+            <a href="#">Изучения</a>
+            <a href="#">Солнечной системы</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="#">Галерея</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="#">Контакты</a>
+          </div>
+        </div>
+      </div>
+      <div class="contents">
+      <div class="contents-head">
+          <h1 id="Solar_s">Солнечная система</h1>
+          <p>Автор: Борисов Д.А</p>
+      </div>
+      <div class="contents-body">
+          <div class="contents-cont">
+          <img
+            src="Object/Солнечная система.jpeg"
+            alt="Солнечная система"
+            width="495"
+            height="371.5"
+          />
+          <p>
+            Добро пожаловать на сайт, посвящённый Планетарной системе под
+            названием - Солнечная система, система, где располагается наша
+            планета Земля!
+          </p>
+          <p>
+            На сайде вы узнаете об формировалась Солнечна система, об её
+            изучении, об космических телах располагающиеся в пространстве
+            системы (, а также вы сможете познакомится с интерактивной картой
+            солнечной системы и галерей фотографий)
+          </p>
+          <p>
+            Плане́тная систе́ма (планетарная система) — система звёзд и различных
+            незвёздообразных астрономических объектов: планет и их спутников,
+            карликовых планет и их спутников, астероидов, метеороидов, комет и
+            космической пыли, которые обращаются вокруг общего центра масс.
+            Несколько гравитационно связанных звёзд с замкнутыми орбитами и их
+            планетные системы образуют звёздную систему. Планетная система, в
+            которую входит Земля, вместе с Солнцем образует Солнечную систему
+          </p>
+          <p>
+            Со́лнечная систе́ма — планетная система, включающая в себя центральную
+            звезду Солнце и все естественные космические объекты на
+            гелиоцентрических орбитах. Она сформировалась путём гравитационного
+            сжатия газопылевого облака примерно 4,57 млрд лет назад. Солнечная
+            система входит в состав структуры галактики Млечный Путь
+          </p>
+          <p>
+            Четыре ближайшие к Солнцу планеты, называемые планетами земной
+            группы, — Меркурий, Венера, Земля и Марс — состоят в основном из
+            силикатов и металлов. Четыре более удалённые от Солнца планеты —
+            Юпитер, Сатурн, Уран и Нептун (также называемые газовыми гигантами)
+            — намного более массивны, чем планеты земной группы. Шесть планет из
+            восьми и четыре карликовые планеты имеют естественные спутники.
+            Юпитер, Сатурн, Уран и Нептун окружены кольцами пыли и других
+            частиц.
+          </p>
+          <p>
+            В Солнечной системе существуют две области, заполненные малыми
+            телами. Пояс астероидов, находящийся между Марсом и Юпитером, схож
+            по составу с планетами земной группы, поскольку состоит из силикатов
+            и металлов. Крупнейшими объектами пояса астероидов являются
+            карликовая планета Церера и астероиды Паллада, Веста и Гигея. За
+            орбитой Нептуна располагаются транснептуновые объекты, состоящие из
+            замёрзшей воды, аммиака и метана, крупнейшими из которых являются
+            Плутон, Седна, Хаумеа, Макемаке, Квавар, Орк и Эрида. В Солнечной
+            системе существуют и другие популяции малых тел, такие как планетные
+            квазиспутники и троянцы, околоземные астероиды, кентавры,
+            дамоклоиды, а также перемещающиеся по системе кометы, метеороиды и
+            космическая пыль.
+          </p>
+        </div>
+      </div>
+      <div class="contents-navication_page-menu">
+            <div class="navication_page-menu">
+              <p>Навигация по странице</p>
+            <a href="#Solar_s">Солнечная система</a>
+          </div>
+          <div class="navication_page-link">
+            <p>Навигация по сайту</p>
+            <a href="#Start">Главная</a>
+            <a href="#Solar_s">Карта</a>
+            <a href="#Solar_s">Тела</a>
+            <a href="#Solar_s">История</a>
+            <a href="#Solar_s">Галерея</a>
+            <a href="#Solar_s">Контакты</a>
+          </div>
+          <div class="YouKnew">
+            <span>
+              <p>А вы знали?</p>
+              <script AA()></script>
+              <p id="citat"></p>
+              <div id="citation"></div>
+              <script>window.onload = function(){ 
+                window.cit = [];
+                  document.getElementById('citat').innerHTML = cit[Math.round((Math.random() * (cit.length - 1) + 0))];
+                }</script>
+          </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
