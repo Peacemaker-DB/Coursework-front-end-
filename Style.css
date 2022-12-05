@@ -287,7 +287,8 @@
         grid-template-areas:
         "header header"
         "navigation navigation"
-        "main nav";
+        "main nav"
+        "foter foter";
     }
     .list_link-menu{
         width: 100px;
@@ -315,7 +316,7 @@
         "header"
         "navigation"
         "main"
-        "footer";
+        "foter";
     }
     .contents-cont img{
         width: 80%;
