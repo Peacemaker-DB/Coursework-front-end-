@@ -3,7 +3,6 @@
 }
 .container{
     width: 80%;
-    margin-right: 10%;
     margin-left: 10%;
     display: grid;
     grid-template-rows: fit-content(0) fit-content(0);
@@ -157,7 +156,7 @@
     background-color: aliceblue;
 }
 
-.contents-cont img{
+.contents-cont img, video{
     width: 80%;
     height: 80%;
     padding-top: 2%;
@@ -213,6 +212,10 @@
     border-radius: 20px;
     background-color: aliceblue;
 }
+.YouKnew p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .navication_mobile{
     display: none;
 }
@@ -242,14 +245,12 @@
     position: fixed;
   }
 
-
-/* Подпись текста */
 .text {
     font-size: 20px;
     width: 100%;
     text-align: center;
   }
-/* Вперед и назад кнопки */
+
 .prev, .next {
     cursor: pointer;
     width: auto;
@@ -374,7 +375,7 @@
     top: 0;
   }
   
-  .navication .icon_burger:hover {
+  .navication .icon_burger:active {
     filter: invert();
   }
 }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <script src="Script.js"></script>
+    <link rel="icon" type="image/png" href="Object/Иконка.png" />
+    <title>Наша Солнечная система</title>
+  </head>
+  <body class="page_style">
+    <div id="navication_bar" class="navication_mobile">
+      <div class="navication">
+        <div class="navication_icon">
+          <img
+            class="icon"
+            src="Иконка.png"
+            alt="Логотип сайта"
+            width="40"
+            height="40"
+          />
+          <p class="active">Солнечная система</p>
+        </div>
+        <div id="myLinks" class="dropdown">
+          <div class="navication_page-link">
+            <p>Навигация по сайту</p>
+            <a href="index.html">Главная</a>
+            <a href="space-body.html">Тела</a>
+            <a href="history.html">История</a>
+            <a href="Galleray.html">Галерея</a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" onclick="Function()">
+          <img
+            class="icon_burger"
+            src="Object/Бургер.png"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </div>
+    <div id="up" class="up_navigation">
+      <div class="n">
+        <a href="#Start">
+          <img
+            class="icon_burger"
+            src="Object/Вверх.png"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="head">
+        <div class="title">
+          <img
+            class="icon"
+            src="Иконка.png"
+            alt="Логотип сайта"
+            width="100"
+            height="100"
+          />
+          <h1 id="Start">Солнечная система</h1>
+          <p>
+            Человечество не останется вечно на Земле, но в погоне за светом и
+            пространством сначала робко проникнет за пределы атмосферы, а затем
+            завоюет себе все околосолнечное пространство.
+          </p>
+          <p>К. Циолковский</p>
+        </div>
+        <div class="slocan">
+          <p>Сайт посвещен пространству Солнечной системы</p>
+        </div>
+      </div>
+      <div class="top-menu">
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="index.html">Главная</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div onclick="topmenu1()" class="list_link-menu">
+            <span>Тела</span>
+          </div>
+          <div id="listlink-menu1" class="link_menu-content">
+            <a href="space-body.html  #celestial_b">Небесные тела</a>
+            <a href="space-body.html  #Sol">Солнце</a>
+            <a href="space-body.html  #Planet">Планеты</a>
+            <a href="space-body.html  #litle_b">Малые космические объекты</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div onclick="topmenu2()" class="list_link-menu">
+            <span>История</span>
+          </div>
+          <div id="listlink-menu2" class="link_menu-content">
+            <a href="history.html #History">Формирование</a>
+            <a href="history.html #History_R">История изучения</a>
+          </div>
+        </div>
+        <div class="link-menu">
+          <div class="list_link-menu">
+            <a href="Galleray.html">Галерея</a>
+          </div>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="contents-cont">
+          <h1 id="V-Galletay">Видео-галерея</h1>
+        </div>
+
+        <div class="contents-cont">
+          <div class="slideshow-container">
+            <div class="slide">
+              <div class="text">Юпитер снятый Вояджером-1</div>
+              <video src="Object/video/videoplayback.mp4" controls> </video>
+            </div>
+            <div class="slide">
+              <div class="text">Нептун снятый Вояджером-2</div>
+              <video src="Object/video/Нептун.mp4" controls> </video>
+            </div>
+            <div class="slide">
+              <div class="text">Модель поверхности Плутона</div>
+              <video src="Object/video/New Horizons Flyover of Pluto.mp4" controls> </video>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides((slideIndex += n));
+            }
+
+            function currentSlide(n) {
+              showSlides((slideIndex = n));
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("slide");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {
+                slideIndex = 1;
+              }
+              if (n < 1) {
+                slideIndex = slides.length;
+              }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+            }
+          </script>
+        </div>
+      </div>
+      <div class="contents-navication_page-menu">
+        <div class="navication_page-menu">
+          <p>Навигация по сайту</p>
+          <a href="index.html">Главная</a>
+          <a href="space-body.html">Тела</a>
+          <a href="history.html">История</a>
+          <a href="Galleray.html">Галерея</a>
+        </div>
+        <div class="YouKnew">
+          <p>А вы знали?</p>
+          <p id="citat"></p>
+          <div id="citation"></div>
+        </div>
+      </div>
+      <div class="foter_container">
+        <div class="line"></div>
+        <div class="foter">
+          <p>Автор сайта: Борисов Д. А.</p>
+          <p>студент группы ИКБО-02-21</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

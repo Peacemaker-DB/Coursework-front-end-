@@ -31,7 +31,7 @@
             <a href="index.html">Главная</a>
             <a href="space-body.html">Тела</a>
             <a href="history.html">История</a>
-            <a href="#Solar_s">Контакты</a>
+            <a href="V-Galleray.html">Видео-галерея</a>
           </div>
         </div>
         <a href="javascript:void(0);" onclick="Function()">
@@ -56,39 +56,6 @@
         </a>
       </div>
     </div>
-    <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-      var up = document.getElementById("up");
-      var stickyup = up.offsetTop;
-
-      var navbar = document.getElementById("navication_bar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
-        if (window.pageYOffset >= stickyup) {
-          up.classList.add("stickyup");
-        } else {
-          up.classList.remove("stickyup");
-        }
-      }
-    </script>
-    <script>
-      function Function() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-    </script>
     <div class="container">
       <div class="head">
         <div class="title">
@@ -139,21 +106,21 @@
         </div>
         <div class="link-menu">
           <div class="list_link-menu">
-            <a href="#">Контакты</a>
+            <a href="V-Galleray.html">Видео-галерея</a>
           </div>
         </div>
       </div>
       <div class="contents">
         <div class="contents-cont">
-          <h1 id="History">Галерея</h1>
+          <h1 id="galleray">Галерея</h1>
         </div>
-
         <div class="contents-cont">
           <div class="slideshow-container">
             <div class="slide">
               <div class="text">Поверхность Солнца</div>
               <img
-                src="Object/Galleray/поверхность солнца.jpg"
+                src="Object/Galleray/Поверхность солнца.jpg"
+                alt="Природа"
                 width="495"
                 height="371.5"
               />
@@ -162,6 +129,7 @@
               <div class="text">Поверхность Венеры</div>
               <img
                 src="Object/Galleray/Поверхность венеры.jpg"
+                alt="Природа"
                 width="495"
                 height="371.5"
               />
@@ -179,6 +147,7 @@
               <div class="text">Юпитер снятый Вояджером-1</div>
               <img
                 src="Object/Galleray/Юпитер Вояджер-1.png"
+                alt="Природа"
                 width="495"
                 height="371.5"
               />
@@ -187,6 +156,7 @@
               <div class="text">Вихрь Юпитера</div>
               <img
                 src="Object/Galleray/Вихрь Юпитера.jpg"
+                alt="Природа"
                 width="495"
                 height="371.5"
               />
@@ -203,15 +173,12 @@
             function plusSlides(n) {
               showSlides((slideIndex += n));
             }
-
             function currentSlide(n) {
               showSlides((slideIndex = n));
             }
-
             function showSlides(n) {
               var i;
               var slides = document.getElementsByClassName("slide");
-              var dots = document.getElementsByClassName("dot");
               if (n > slides.length) {
                 slideIndex = 1;
               }
@@ -221,11 +188,7 @@
               for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
               }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
               slides[slideIndex - 1].style.display = "block";
-              dots[slideIndex - 1].className += " active";
             }
           </script>
         </div>
@@ -236,11 +199,10 @@
           <a href="index.html">Главная</a>
           <a href="space-body.html">Тела</a>
           <a href="history.html">История</a>
-          <a href="#Solar_s">Контакты</a>
+          <a href="V-Galleray.html">Видео-галерея</a>
         </div>
         <div class="YouKnew">
           <p>А вы знали?</p>
-          <script AA()></script>
           <p id="citat"></p>
           <div id="citation"></div>
         </div>
