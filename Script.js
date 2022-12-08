@@ -1,13 +1,17 @@
 
+// функция открытия ссылкои на разделы страниц
 function topmenu1() {
   document.getElementById("listlink-menu1").classList.toggle("show");
 }
-window.onclick = function (event) {
-  if (!event.target.matches(".link-menu")) {
-    var dropdowns = document.getElementsByClassName("list_link-menu");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+window.onclick = function (event)//получение события клика на область кнопки 
+{
+  if (!event.target.matches(".link-menu")) // проверка на верность области клика
+  {
+    let dropdowns = document.getElementsByClassName("list_link-menu");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) // цикл вывода ссылок на экран
+    {
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains("show")) {
         openDropdown.classList.remove("show");
       }
@@ -17,21 +21,10 @@ window.onclick = function (event) {
 function topmenu2() {
   document.getElementById("listlink-menu2").classList.toggle("show");
 }
-window.onclick = function (event) {
-  if (!event.target.matches(".link-menu")) {
-    var dropdowns = document.getElementsByClassName("list_link-menu");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
 
+// функция вывода текста для блока "А Вы знали?"
 window.onload = function () {
-  window.cit = [
+  let cit = [
     " Около 99,86% массы Солнечной системы приходится на само Солнце.",
     "Ближайшая звезда, Проксима Центавра, находится на расстоянии в 4,24 световых года от нас.",
     "Наименее плотной планетой является Сатурн, его плотность ниже плотности воды.",
@@ -43,12 +36,15 @@ window.onload = function () {
     "Самая высокая в Солнечной системе гора расположена на Марсе, это древний вулкан Олимп.",
     "В Солнечной системе открыто 205 спутников планет",
   ];
+  //случайны выбор элемента в массиве и его вывод на веб-страницу
   document.getElementById("citat").innerHTML =
     cit[Math.round(Math.random() * (cit.length - 1) + 0)];
 };
 
-function Function() {
-  var x = document.getElementById("myLinks");
+// функция открытия бургер-меню
+function Burger_menu() {
+  let x = document.getElementById("myLinks");
+  // проврека области клика
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -56,15 +52,19 @@ function Function() {
   }
 }
 
+
 window.onscroll = function () {
   stick();
 };
-var up = document.getElementById("up");
-var stickyup = up.offsetTop;
+// для кнопки "Вверх"
+let up = document.getElementById("up");
+let stickyup = up.offsetTop;
 
-var navbar = document.getElementById("navication_bar");
-var sticky = navbar.offsetTop;
+// для бургер-меню
+let navbar = document.getElementById("navication_bar");
+let sticky = navbar.offsetTop;
 
+// функция для закрепление элементов на экран при перемещении по странице
 function stick() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");

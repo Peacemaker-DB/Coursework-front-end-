@@ -34,7 +34,7 @@
             <a href="Galleray.html">Галерея</a>
           </div>
         </div>
-        <a href="javascript:void(0);" onclick="Function()">
+        <a href="javascript:void(0);" onclick="Burger_menu()">
           <img
             class="icon_burger"
             src="Object/Бургер.png"
@@ -134,35 +134,29 @@
           </div>
 
           <script>
-            var slideIndex = 1;
+            let slideIndex = 1;
             showSlides(slideIndex);
-
+            // функция для пролистывание
             function plusSlides(n) {
               showSlides((slideIndex += n));
             }
-
-            function currentSlide(n) {
-              showSlides((slideIndex = n));
-            }
-
+             // функция вывода слайда
             function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("slide");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              if (n > slides.length) // проверка на перемотку в начало галереи
+              {
                 slideIndex = 1;
               }
-              if (n < 1) {
+              if (n < 1) // проверка на перемотку в конец галереи
+              {
                 slideIndex = slides.length;
               }
+              //цикл для удаления не текущих слайдов
               for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
               }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
               slides[slideIndex - 1].style.display = "block";
-              dots[slideIndex - 1].className += " active";
             }
           </script>
         </div>

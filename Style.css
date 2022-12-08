@@ -302,15 +302,11 @@
     body{
         margin-top: 0;
     }
-    .title p{
+    .head{
         display: none;
     }
-    .title .icon{
-        padding-left: 50px;
-        overflow: hidden;
-    }
     .container {
-        margin-top: 50px;
+        margin-top: 20px;
         grid-template-rows: repeat(6, fit-content(0));
         grid-template-columns: 100%;
         grid-template-areas:
