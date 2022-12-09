@@ -53,28 +53,5 @@ function Burger_menu() {
 }
 
 
-window.onscroll = function () {
-  stick();
-};
-// для кнопки "Вверх"
-let up = document.getElementById("up");
-let stickyup = up.offsetTop;
 
-// для бургер-меню
-let navbar = document.getElementById("navication_bar");
-let sticky = navbar.offsetTop;
-
-// функция для закрепление элементов на экран при перемещении по странице
-function stick() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-  if (window.pageYOffset >= stickyup) {
-    up.classList.add("stickyup");
-  } else {
-    up.classList.remove("stickyup");
-  }
-}
 
