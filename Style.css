@@ -294,6 +294,10 @@
     .list_link-menu{
         width: 100px;
     }
+    .link_menu-content{
+        width: 100px;
+        word-wrap: break-word;
+    }
     .link-menu{
         padding-left: 0%;
     }
